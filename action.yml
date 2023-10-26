@@ -1,23 +1,28 @@
-name: "CordCloud Action"
-description: "GitHub Action for CordCloud"
-author: "yanglbme"
+name: "me-1 Action"
+description: "GitHub Action for me-1"
+author: "lentikr"
 branding:
   icon: "check-circle"
   color: "gray-dark"
 inputs:
-  email:
-    description: "your cordcloud email"
+  username:
+    description: "your me-1 username"
     required: true
   passwd:
-    description: "your cordcloud password"
+    description: "your me-1 password"
     required: true
-  secret:
-    description: "your 2 step secret"
-    required: false
   host:
     description: "base host"
-    required: false
-    default: "cordcloud.us,cordcloud.one,cordcloud.biz,c-cloud.xyz"
+    required: true
+  login_path:
+    description: "login path"
+    required: true
+  token_path:
+    description: "token path"
+    required: true
+  checkin_path:
+    description: "checkin_path"
+    required: true
 outputs:
   result:
     description: "The result of api"

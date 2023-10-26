@@ -1,3 +1,2 @@
 actions-toolkit
-pyotp
 requests
