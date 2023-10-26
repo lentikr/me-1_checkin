@@ -21,7 +21,7 @@ inputs:
     description: "token path"
     required: true
   checkin_path:
-    description: "checkin_path"
+    description: "checkin path"
     required: true
 outputs:
   result:
