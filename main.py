@@ -8,11 +8,10 @@ from app.action import Action
 action = {
     'action': 'me-1 Action',
     'author': 'lentikr',
-    'github': 'https://github.com/lentikr',
-    'marketplace': 'https://github.com/marketplace/actions/me-1-action'
+    'github': 'https://github.com/lentikr'
 }
 
-welcome = Template('欢迎使用 $action ❤\n\n📕 入门指南: $marketplace\n📣 由 $author 维护: $github\n')
+welcome = Template('欢迎使用 $action ❤\n\n 📣 由 $author 维护: $github\n')
 log.info(welcome.substitute(action))
 
 try:
@@ -20,9 +19,9 @@ try:
     username = core.get_input('username', required=True)
     passwd = core.get_input('passwd', required=True)
     host = core.get_input('host', required=True)
-    login_path = core.get_input('login_path', require=True)
-    token_path = core.get_input('token_path', require=True)
-    checkin_path = core.get_input('checkin_path', require=True)
+    login_path = core.get_input('login_path', required=True)
+    token_path = core.get_input('token_path', required=True)
+    checkin_path = core.get_input('checkin_path', required=True)
 
     action = Action(username, passwd, host, login_path, token_path, checkin_path)
     try:
